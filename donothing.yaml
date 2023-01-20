@@ -1,0 +1,34 @@
+---
+apiVersion: apiextensions.crossplane.io/v1
+kind: CompositeResourceDefinition
+metadata:
+  name: xdonothing.notmuch.example.org
+spec:
+  group: notmuch.example.org
+  names:
+    kind: XDoNothing
+    plural: xdonothings
+  claimNames:
+    kind: DoNothing
+    plural: donothingss
+  versions:
+  - name: v1alpha1
+    served: true
+    referenceable: true
+    schema:
+      openAPIV3Schema:
+        type: object
+        properties:
+          spec:
+            type: object
+            properties:
+              parameters:
+                type: object
+                properties:
+                  useless:
+                    type: string
+                required:
+                - useless
+            required:
+            - parameters
+...
