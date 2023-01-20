@@ -9,7 +9,7 @@ The generation of the yaml documents is out of scope for this PoC.
 Build the package image
 ```
 export TAG=examplerepo/donothingpackage:v0.0.1
-docker build -t $TAG --build-arg TAG=$TAG
+docker build -t $TAG --build-arg TAG=$TAG .
 ```
 
 Push the package to a container registry:
